@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "c9557372-129d-48fc-b564-13c94ee85916",
+		"name": "TutorBin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9377048"
+	},
+	"item": [
+		{
+			"name": "TODO",
+			"item": [
+				{
+					"name": "GET TODO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/tutor-bin/todo/get-all",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tutor-bin",
+								"todo",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE TODO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Complete TutorBin Assignment 3\",\r\n    \"desc\": \"CRUD Operations Assignment\",\r\n    \"todoType\": \"General\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tutor-bin/todo/create",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tutor-bin",
+								"todo",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE TODO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"6307f4487b8d8c3362ba7d45\",\r\n    \"name\": \"Complete TutorBin Assignment NEW\",\r\n    \"desc\": \"CRUD Operations  NEW\",\r\n    \"todoType\": \"Not General\",\r\n    \"status\":\"Completed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tutor-bin/todo/update",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tutor-bin",
+								"todo",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ONE TODO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"todoId\": \"6307f4487b8d8c3362ba7d45\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tutor-bin/todo/get-one",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tutor-bin",
+								"todo",
+								"get-one"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE TODO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"todoId\": \"63087287563148f2a383ee49\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tutor-bin/todo/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tutor-bin",
+								"todo",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Abhishek Tyagi\",\r\n    \"email\":\"tyagiabhishek1998@gmail.com\",\r\n    \"password\":\"AbhishekTyagi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tutor-bin/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tutor-bin",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"tyagiabhishek1998@gmail.com\",\r\n    \"password\":\"AbhishekTyagi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tutor-bin/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tutor-bin",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
